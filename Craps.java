@@ -29,7 +29,12 @@ public class Craps
         String play = in.nextLine();
         if (play.equalsIgnoreCase("y"))
         {
-            
+            System.out.println("Press enter to roll");
+            String roll = in.nextLine();
+            if (roll.equals(""))
+            {
+                
+            }
         }
     }
 
@@ -39,9 +44,18 @@ public class Craps
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void sampleMethod()
+    public void die()
     {
         // put your code here
-        
+        int one = (int) (Math.random() * 6) + 1;
+        int two = (int) (Math.random() * 6) + 1;
+    }
+    
+    public int returnTotal()
+    {
+        int one = (int) (Math.random() * 6) + 1;
+        int two = (int) (Math.random() * 6) + 1;
+        int total = one + two;
+        return total;
     }
 }
