@@ -25,9 +25,12 @@ public class Die
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public int rollDice()
     {
         // put your code here
-        return x + y;
+        int roll1 = (int) (Math.random() * 6) + 1;
+        int roll2 = (int) (Math.random() * 6) + 1;
+        int total = roll1 + roll2;
+        return total;
     }
 }

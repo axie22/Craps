@@ -10,12 +10,13 @@ import java.util.Scanner;
 
 public class Craps
 {
-    // instance variables - replace the example below with your own
-    private int rolls;
-
     public static void main(String[] args)
     {
+        System.out.println("Welcome to Craps!");
+        System.out.println("Would you like to play craps? (y/n)");
         Scanner in = new Scanner(System.in);
+        String play = in.nextLine();
+        Die dice = new Die();
         System.out.println("Would you like to see the rules for craps? (y/n)");
         String rules = in.nextLine();
         if (rules.equalsIgnoreCase("y"))
@@ -25,37 +26,50 @@ public class Craps
             System.out.println("If a 4, 5, 6, 8, 9, or 10 are rolled on this first roll, that number becomes the point.");
             System.out.println("3:The player continues to roll the two dice again until one of two things happens: either they roll the point from that first roll again, in which case they win; or they roll a 7, in which case they lose.");
         }
-        System.out.println("Would you like to play craps? (y/n)");
-        String play = in.nextLine();
-        if (play.equalsIgnoreCase("y"))
+        while (play.equalsIgnoreCase("y"))
         {
-            System.out.println("Press enter to roll");
-            String roll = in.nextLine();
-            if (roll.equals(""))
+            System.out.println("Press [Enter] to roll");
+            Scanner in3 = new Scanner(System.in);
+            String waiting = in3.nextLine();
+            int result = dice.rollDice();
+            if (result == 7 || result == 11)
             {
-                
+                System.out.println("You rolled a " + result);
+                System.out.println("You win the first round! Keep rolling");
             }
+            else if (result == 2 || result == 3 || result == 12)
+            {
+                System.out.println("You rolled a " + result);
+                System.out.println("You lost :(");
+            }
+            else
+            {
+                int count = 0;
+                int point = result;
+                while ((result != 7 && point != result) || count == 0)
+                {
+                    count ++;
+                    System.out.println("You rolled a " + result);
+                    System.out.println("Your point is " + point);
+                    System.out.println("Press [Enter] to keep rolling!");
+                    Scanner in4 = new Scanner(System.in);
+                    String pause = in4.nextLine();
+                    result = dice.rollDice();
+                    if (result == point)
+                    {
+                        System.out.println("You rolled a " + result);
+                        System.out.println("Congratulations, you win!");
+                    }
+                    else if (result == 7)
+                    {
+                        System.out.println("You rolled a " + result);
+                        System.out.println("You lose");
+                    }
+                }
+            }
+            System.out.println("Would you like to play again (y/n)");
+            play = in.nextLine();
         }
-    }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public void die()
-    {
-        // put your code here
-        int one = (int) (Math.random() * 6) + 1;
-        int two = (int) (Math.random() * 6) + 1;
-    }
-    
-    public int returnTotal()
-    {
-        int one = (int) (Math.random() * 6) + 1;
-        int two = (int) (Math.random() * 6) + 1;
-        int total = one + two;
-        return total;
     }
 }
