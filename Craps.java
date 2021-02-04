@@ -2,8 +2,8 @@
 /**
  * Write a description of class Craps here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Alex Xie
+ * @version 02-04-21
  */
 
 import java.util.Scanner;

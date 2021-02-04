@@ -2,8 +2,8 @@
 /**
  * Write a description of class Die here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Alex Xie
+ * @version 02-04-21
  */
 public class Die
 {
@@ -22,8 +22,7 @@ public class Die
     /**
      * An example of a method - replace this comment with your own
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return total of dice
      */
     public int rollDice()
     {
