@@ -35,7 +35,7 @@ public class Craps
             if (result == 7 || result == 11)
             {
                 System.out.println("You rolled a " + result);
-                System.out.println("You win the first round! Keep rolling");
+                System.out.println("You win!");
             }
             else if (result == 2 || result == 3 || result == 12)
             {

@@ -8,7 +8,7 @@
 public class Die
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private int roll;
 
     /**
      * Constructor for objects of class Die
@@ -16,7 +16,7 @@ public class Die
     public Die()
     {
         // initialise instance variables
-        x = 0;
+        roll = 1;
     }
 
     /**
