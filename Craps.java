@@ -73,3 +73,25 @@ public class Craps
 
     }
 }
+
+
+/* 
+
+COMMENTS FROM THE INSTRUCTOR:
+
+This is a pretty good version of the Craps game, Alex. It plays by the
+rules of Craps, and you built in a clever little check of the "count"
+variable to allow the second loop to run cleanly. That was a neat
+idea!
+
+Your version of this program doesn't appear to have the default (Y/n) 
+feature included, which was given in the assignment handout. Also,
+feel free to break this rather long program up into a few static 
+methods to make it all a little more manageable, yes?
+
+Otherwise, very nice work!
+
+SCORE: 14/15
+
+*/
+
